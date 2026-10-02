@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How to delete data associated with the Perklet Android app.">
-  <title>Perklet Data Deletion</title>
+  <meta name="description" content="How to request deletion of your Perklet account and associated data, remove local app data, and manage subscription renewals.">
+  <title>Perklet Account and Data Deletion</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -16,8 +16,43 @@
 
     <article class="card">
       <p class="eyebrow">Privacy controls</p>
-      <h1>Perklet data deletion</h1>
-      <p>Perklet does not create or operate user accounts and does not run a server that stores your Twitch session, watched games, reward history, or monitoring activity. Most Perklet data stays in the app's private storage on your device.</p>
+      <h1>Perklet account and data deletion</h1>
+      <div class="meta">
+        <p><strong>Updated:</strong> October 2, 2026</p>
+        <p><strong>Application:</strong> Perklet for Android (<code>app.perklet</code>)</p>
+        <p><strong>Contact:</strong> <a href="mailto:perklet.support@gmail.com?subject=Perklet%20account%20deletion">perklet.support@gmail.com</a></p>
+      </div>
+      <p>In account-enabled builds, Google sign-in creates a Perklet account through Firebase Authentication. Sign-in is optional for exploring the app. Subscription-enabled builds also keep associated subscription or complimentary-access records in RevenueCat. Your Twitch connection and most monitoring data are managed separately on your device.</p>
+
+      <h2>Request deletion of your Perklet account</h2>
+      <p>You can submit a request from the app:</p>
+      <ol>
+        <li>Open <strong>Settings → About app → Request account deletion</strong>.</li>
+        <li>Choose <strong>Open email draft</strong>.</li>
+        <li>Review the draft and send it to <a href="mailto:perklet.support@gmail.com?subject=Perklet%20account%20deletion">perklet.support@gmail.com</a>. Include the Google email you use to sign in to Perklet; the draft adds it when available.</li>
+      </ol>
+      <p>If you are signed out, enter your Google sign-in email before sending. If no email app is available, Perklet copies the request and shows where to send it; you must still send the request yourself. Opening or copying a draft does not submit it, delete an account, or sign you out.</p>
+      <p>You do not need the app to request deletion:</p>
+      <ol>
+        <li>Email <a href="mailto:perklet.support@gmail.com?subject=Perklet%20account%20deletion">perklet.support@gmail.com</a>, preferably from your Google sign-in email.</li>
+        <li>Use the subject <strong>Perklet account deletion</strong>.</li>
+        <li>Give the Google sign-in email associated with your Perklet account and ask to delete the account and associated account data.</li>
+      </ol>
+      <p>An internal Perklet or RevenueCat customer ID is not required. Do not send passwords, authentication tokens, payment-card details, or service-account files. Support may ask you to verify ownership before removing records.</p>
+
+      <h2>What the request covers</h2>
+      <p>After verifying ownership, support handles deletion of your Firebase Authentication account, associated RevenueCat customer and complimentary-access data under the developer's control, and associated support correspondence or attachments. Limited records may need to be retained as explained below.</p>
+      <p>This deletes the Perklet account, not your Google or Twitch account. It does not remotely clear watched games, reward history, or other data on your device. Use the local-data steps below to remove those records. Google Play keeps store transaction records under its own policies.</p>
+      <p>We normally complete verifiable requests within 30 days and confirm when deletion is complete. No fixed additional retention period applies. If limited records must be retained for legal, security, fraud-prevention, or transaction obligations, we will explain what is retained and for how long.</p>
+
+      <h2>Cancel a paid subscription separately</h2>
+      <p><strong>Account deletion, signing out, uninstalling, and receiving complimentary access do not stop paid renewals.</strong> To cancel a Google Play subscription:</p>
+      <ol>
+        <li>Open Google Play using the account that paid for the subscription. This can differ from your Google sign-in account in Perklet.</li>
+        <li>Open <strong>Payments &amp; subscriptions → Subscriptions → Perklet</strong>.</li>
+        <li>Choose <strong>Cancel subscription</strong> and complete Google Play's confirmation steps.</li>
+      </ol>
+      <p>A refund is a separate request. For payment or refund questions, use Google Play's support options or contact <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a>. Simulated Test Store purchases do not charge real money.</p>
 
       <h2>Delete data stored on your device</h2>
       <p>To delete all locally stored Perklet data, including your Twitch session, preferences, watched games, cached catalog, monitoring state, claimed-reward history, and local diagnostic log:</p>
@@ -26,22 +61,26 @@
         <li>Open Apps, then Perklet.</li>
         <li>Open Storage and select Clear storage or Clear data.</li>
       </ol>
-      <p>Uninstalling Perklet also removes its local app data. Disconnecting Twitch inside Perklet removes the saved Twitch session and current Twitch catalog, but watched-game choices and claimed-reward history may remain until you clear app storage or uninstall.</p>
+      <p>Uninstalling Perklet also removes its local app data, including cached profile pictures. Disconnecting Twitch inside Perklet removes the saved Twitch session and current Twitch catalog, but watched-game choices and claimed-reward history may remain until you clear app storage or uninstall. Restoring an eligible Android backup can restore backed-up non-secret app data.</p>
+      <p>Clearing storage or uninstalling does not delete your Firebase sign-in account, RevenueCat records, or support messages, and does not cancel subscription renewals. Use the account-request and subscription steps above for those actions.</p>
 
-      <h2>Request deletion from the developer</h2>
-      <p>The developer may hold support emails, feedback, or diagnostic attachments only when you chose to send them. To request deletion:</p>
+      <h2>Delete support correspondence without a Perklet account</h2>
+      <p>If you never created a Perklet account, or only want to delete messages you sent to support:</p>
       <ol>
         <li>Email <a href="mailto:perklet.support@gmail.com?subject=Perklet%20data%20deletion%20request">perklet.support@gmail.com</a> from the address used for the correspondence.</li>
         <li>Use the subject <strong>Perklet data deletion request</strong>.</li>
         <li>Describe the messages or attachments you want deleted and, if possible, when they were sent.</li>
       </ol>
-      <p>We normally complete verifiable requests within 30 days and confirm when the deletion is complete. No fixed additional retention period applies. If limited records must be retained for legal, security, or abuse-prevention reasons, we will explain what is retained and for how long.</p>
+      <p>The same ownership checks, normal 30-day handling period, and retention exceptions described above apply.</p>
 
       <h2>Crash reports</h2>
       <p>Optional crash reporting is off by default. Turning it off removes reports that have not yet been sent after Perklet is reopened. Reports already uploaded to Firebase Crashlytics are not associated with a Twitch or Perklet user ID and generally cannot be matched to an individual deletion request. Firebase retains uploaded Crashlytics reports for up to 90 days.</p>
 
       <h2>Twitch data</h2>
       <p>Disconnecting or deleting Perklet does not delete your Twitch account or information held by Twitch. Perklet does not control that data. Manage or delete it through Twitch's account and privacy controls.</p>
+
+      <h2>Google account</h2>
+      <p>A Perklet account-deletion request does not delete your Google account or its Gmail messages, Drive files, or other Google data. Perklet does not request access to those messages or files. You can separately review or remove Perklet's sign-in connection in your Google Account settings.</p>
 
       <h2>Questions</h2>
       <p>For questions about deletion or retention, contact <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a>. See the <a href="../privacy/">Perklet privacy policy</a> for complete information about data handling.</p>

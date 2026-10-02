@@ -18,12 +18,13 @@
       <p class="eyebrow">Privacy policy</p>
       <h1>Perklet privacy policy</h1>
       <div class="meta">
-        <p><strong>Effective:</strong> September 15, 2026</p>
+        <p><strong>Effective:</strong> October 2, 2026</p>
         <p><strong>Application:</strong> Perklet for Android (<code>app.perklet</code>)</p>
         <p><strong>Contact:</strong> <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a></p>
       </div>
 
       <p>Perklet is an independent Android companion for monitoring Twitch Drops. This policy explains the data handled by Perklet and the choices available to you. Perklet does not sell personal data, run advertising, or use Firebase Analytics.</p>
+      <p>This policy covers builds with optional Google sign-in as well as builds without accounts. Subscription features are available only in subscription-enabled builds; signing in alone never starts a purchase.</p>
 
       <h2>Data kept on your device</h2>
       <p>Perklet stores the following in its private app storage so that it can operate:</p>
@@ -32,7 +33,8 @@
         <li>cached games, campaigns, rewards, and artwork;</li>
         <li>current monitoring, progress, and pending-claim state;</li>
         <li>claimed-reward history and notification bookkeeping;</li>
-        <li>preferences such as onboarding, monitoring, and restart choices; and</li>
+        <li>preferences such as onboarding, monitoring, and restart choices;</li>
+        <li>sign-in state and cached subscription-access information, when those features are enabled; and</li>
         <li>a bounded technical event log used for diagnostics.</li>
       </ul>
       <p>Twitch session credentials and cookies are encrypted with a key protected by the Android Keystore. They are stored in Android's no-backup area and excluded from cloud backup and device transfer. Other operational data is held in app-private storage, but it is not separately encrypted by Perklet.</p>
@@ -45,8 +47,30 @@
         <li>select eligible channels and advance Drop progress while Monitoring is on; and</li>
         <li>submit completed reward claims.</li>
       </ul>
-      <p>The developer does not operate a Perklet server for these features and does not receive your Twitch credentials, session, campaign data, or reward history. Perklet may request artwork from addresses supplied by Twitch. Twitch and those image hosts receive ordinary network information, such as your IP address, when the app connects to them.</p>
+      <p>The developer does not operate a Perklet server for these Twitch features. Perklet does not upload your Twitch credentials, session, watched games, campaign data, or reward history to a developer-operated server. The app displays your Twitch profile picture and may request campaign artwork from addresses supplied by Twitch. Twitch and those image hosts receive ordinary network information, such as your IP address, when the app connects to them.</p>
+      <p>Twitch may omit public campaigns from account-specific responses. To keep the campaign list complete, Perklet also retrieves public campaign metadata from the open-source <a href="https://github.com/SunkwiBOT/twitch-drops-api">SunkwiBOT Twitch Drops API</a> over an encrypted connection. Perklet does not send Twitch credentials, cookies, account identifiers, watched-game choices, progress, or reward history to this service. Its operator receives ordinary network information, such as your IP address and the Perklet user-agent, when the catalog is refreshed.</p>
       <p>Perklet is not affiliated with, endorsed by, or sponsored by Twitch or any game publisher. Twitch processes data under its own <a href="https://www.twitch.tv/p/en/legal/privacy-notice/">Privacy Notice</a>.</p>
+
+      <h2>Google sign-in and your Perklet account</h2>
+      <p>In account-enabled builds, choosing <strong>Continue with Google</strong> creates or signs in to a Perklet account through Google Firebase Authentication. Google sign-in is optional for exploring the app and is required before starting a new subscription purchase. Your Twitch connection is managed separately.</p>
+      <p>Google and Firebase Authentication process your Google account identifier, email address, name, profile-picture information, and authentication tokens to sign you in and maintain your session. The developer can view your Perklet account record in Firebase Authentication. Perklet uses basic Google sign-in and does not request access to your Gmail messages, Google Drive files, or Google password.</p>
+      <p>The app displays your account label and Google profile picture. It downloads the picture from Google's image hosts and caches it on your device. Those hosts receive ordinary network information, such as your IP address. Account profile pictures are not sent to RevenueCat.</p>
+      <p>Signing out of Perklet ends the app's signed-in session. It does not delete your Google account, disconnect Twitch, delete retained account or purchase records, or cancel a subscription.</p>
+
+      <h2>Subscriptions and complimentary access</h2>
+      <p>Subscription-enabled builds use RevenueCat to check and maintain subscription or complimentary access. RevenueCat receives:</p>
+      <ul>
+        <li>an app-specific customer identifier based on your Firebase account identifier when you are signed in;</li>
+        <li>your verified Google sign-in email as a customer lookup attribute for support and manually granted complimentary access;</li>
+        <li>store purchase and subscription records, transaction identifiers, and access status; and</li>
+        <li>technical information such as app and SDK versions, device and operating-system information, and network information needed to provide the service.</li>
+      </ul>
+      <p>RevenueCat may also create an anonymous customer identifier when you are not signed in. Test Store builds use a separate customer-ID namespace so simulated access is not treated as a real Google Play purchase. Your email is a support lookup attribute, not the billing identifier or proof of access.</p>
+      <p>This information is used to validate purchases, recover access, prevent duplicate purchases, provide support, and manage manually granted complimentary access. The developer can view the associated customer, subscription, and complimentary-access records in RevenueCat. Perklet does not send your Google name, profile pictures, Twitch identity, Twitch credentials, watched games, or reward history to RevenueCat. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+      <p>Google Play processes real subscription payments and renewals. Perklet does not receive your payment-card or bank-account details. The Google account used to sign in to Perklet can differ from the Google Play account used for payment. Any subscription price and recurring-payment terms are shown before you confirm a purchase.</p>
+      <p>Signing in does not buy a subscription or automatically grant complimentary access. Complimentary access is granted manually by the developer and does not start a paid subscription. Builds with subscriptions disabled do not initialize RevenueCat.</p>
+      <p>Builds clearly marked <strong>TEST MODE</strong> use RevenueCat's Test Store for simulated purchases. These purchases do not charge real money and do not grant access in Google Play builds.</p>
+      <p>Subscription, purchase, and complimentary-access records can remain with Google Play and RevenueCat for service operation, access recovery, fraud prevention, support, and applicable retention obligations. Signing out, uninstalling, or clearing local app storage does not erase those records. Contact support to request access to or deletion of associated records; see the <a href="../data-deletion/">account and data deletion instructions</a> for the process and retention exceptions.</p>
 
       <h2>Optional crash reporting</h2>
       <p>Crash reporting is off by default. If you enable <strong>Share crash reports</strong> in the app, Google Firebase Crashlytics may receive:</p>
@@ -67,24 +91,28 @@
 
       <h2>Backups and retention</h2>
       <p>Current campaign and reward cache entries are replaced as Perklet refreshes its catalog. Preferences, watched games, and claimed-reward history remain until you remove them. Cached images are evicted automatically according to the app's cache limits.</p>
-      <p>If Android backup or device transfer is enabled in your device settings, Android may copy eligible non-secret app data. Perklet explicitly excludes Twitch credentials, the crash-reporting choice, entitlement state, and the diagnostic log from backup and transfer.</p>
-      <p>Clearing app storage or uninstalling removes local Perklet data. It does not remove support email already sent or Crashlytics reports already uploaded.</p>
+      <p>If Android backup or device transfer is enabled in your device settings, Android may copy eligible non-secret app data. Perklet explicitly excludes Twitch credentials, all shared preferences (including sign-in and billing identity and the crash-reporting choice), and the diagnostic log from backup and transfer. Appearance preferences may reset after transfer; watched-game records remain eligible for backup.</p>
+      <p>Clearing app storage or uninstalling removes local Perklet data. It does not delete your Firebase sign-in account, Google Play or RevenueCat records, support email already sent, or Crashlytics reports already uploaded. Restoring an eligible Android backup can restore backed-up non-secret app data.</p>
 
       <h2>Your choices and deletion</h2>
       <p>You can:</p>
       <ul>
         <li>pause Monitoring at any time;</li>
         <li>disconnect Twitch;</li>
+        <li>skip Google sign-in while exploring, or sign out of Perklet;</li>
         <li>turn optional crash reporting off;</li>
-        <li>decline to send feedback or diagnostic reports; and</li>
+        <li>decline to send feedback or diagnostic reports;</li>
+        <li>request deletion of your Perklet account and associated account data; and</li>
         <li>clear Perklet storage in Android settings or uninstall the app.</li>
       </ul>
       <p>Disconnecting Twitch removes the saved Twitch session and current Twitch catalog. Locally stored watched-game choices or claimed-reward history may remain so that a later reconnection can restore useful context. Clear app storage or uninstall to remove all local Perklet data.</p>
-      <p>Perklet does not create a separate Perklet account, so there is no Perklet account to delete. To request a copy or deletion of support correspondence, email <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a> from the relevant address and describe the request.</p>
+      <p>In account-enabled builds, open <strong>Settings → About app → Request account deletion → Open email draft</strong>. Review and send the draft to request deletion of your Perklet account and associated account and support data. Opening the draft does not submit a request, delete an account, or sign you out.</p>
+      <p>Without the app, email <a href="mailto:perklet.support@gmail.com?subject=Perklet%20account%20deletion">perklet.support@gmail.com</a> with the subject <strong>Perklet account deletion</strong> and include your Google sign-in email. An internal customer ID is not required. Never send passwords, authentication tokens, payment-card details, or service-account files. Support may ask you to verify account ownership.</p>
+      <p>We normally complete verifiable deletion requests within 30 days and confirm when deletion is complete. No fixed additional retention period applies. Limited records may need to be retained for legal, security, fraud-prevention, or transaction obligations; support will explain what is retained and for how long. Google Play maintains store transaction records under its own policies. See the <a href="../data-deletion/">account and data deletion instructions</a> for details.</p>
+      <p>Deleting your Perklet account does not delete your Google or Twitch account. It also does <strong>not cancel a paid subscription</strong>. Cancel recurring charges separately in <strong>Google Play → Payments &amp; subscriptions → Subscriptions → Perklet</strong>, using the Google Play account that made the purchase.</p>
 
       <h2>Other services</h2>
-      <p>Twitch, Google Firebase, Android, Google Play, your email or sharing app, and artwork hosts selected by Twitch process information under their own terms and privacy policies.</p>
-      <p>The current unlimited beta includes Google Play Billing code but keeps purchasing disabled and does not connect to Google Play for checkout. This policy and the Google Play Data Safety declaration must be reviewed before paid checkout is enabled.</p>
+      <p>Twitch, the SunkwiBOT Twitch Drops API, Google Firebase, RevenueCat, Android, Google Play, your email or sharing app, and profile-picture or artwork hosts process information under their own terms and privacy policies. Different app builds can enable different features; this policy explains the data handling for the features you choose to use.</p>
 
       <h2>Children</h2>
       <p>Perklet is not directed to anyone who is not permitted to use Twitch or install the app under applicable law and Twitch's terms. Do not connect an account unless you are allowed to do so.</p>
