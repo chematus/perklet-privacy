@@ -3,24 +3,191 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official public information for the Perklet Android app.">
-  <title>Perklet</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Pick your games, track Twitch Drops, and claim rewards when they're ready. Perklet is an independent Android app for keeping your Drops on track.">
+  <meta name="theme-color" content="#7850cc">
+  <title>Perklet — Keep your Twitch Drops on track</title>
+  <link rel="icon" type="image/svg+xml" href="assets/perklet-icon.svg">
+  <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <main class="shell compact">
-    <header class="brand" aria-label="Perklet">
-      <span class="brand-mark" aria-hidden="true">◆</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="Perklet home">
+      <img src="assets/perklet-icon.svg" width="42" height="42" alt="">
       <span>Perklet</span>
-    </header>
-    <section class="card">
-      <p class="eyebrow">Android app</p>
-      <h1>Perklet</h1>
-      <p>Perklet is an independent companion for monitoring selected Twitch Drops.</p>
-      <p><a class="button" href="privacy/">Read the privacy policy</a></p>
-      <p><a href="data-deletion/">Request data deletion</a></p>
-      <p class="muted">Questions? <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a></p>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#questions">Questions</a>
+      <a href="mailto:perklet.support@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Twitch Drops companion for Android</p>
+        <h1 id="hero-title">Keep your<br><span>Twitch Drops</span><br>on track.</h1>
+        <p class="hero-description">Pick the games you care about. Perklet keeps track of your Twitch Drops and claims rewards when they’re ready.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://play.google.com/store/apps/details?id=app.perklet" target="_blank" rel="noopener noreferrer" aria-label="View Perklet on Google Play (opens in a new tab)">View on Google Play</a>
+          <a class="button button-secondary" href="#how-it-works">See how it works</a>
+        </div>
+        <p class="store-access-note">For now, use the Google account you joined the test with.</p>
+      </div>
+      <figure class="app-preview">
+        <div class="preview-stage">
+          <div class="phone-frame">
+            <img class="app-screen" src="assets/perklet-home-20261002.png" width="1008" height="2244" alt="Perklet Home screen monitoring an EVE Online reward, with estimated time, watched games, and a pause control." fetchpriority="high">
+          </div>
+        </div>
+        <figcaption>Perklet on Android.<br>Campaigns and rewards change over time.</figcaption>
+      </figure>
+    </section>
+
+    <section class="highlights wrap" aria-label="What you can do with Perklet">
+      <div>
+        <span class="feature-number" aria-hidden="true">01</span>
+        <h2>Pick your games</h2>
+        <p>Find active campaigns and see what you can earn in the games you follow.</p>
+      </div>
+      <div>
+        <span class="feature-number" aria-hidden="true">02</span>
+        <h2>Follow your progress</h2>
+        <p>See how your current Drop is coming along and how much time is left, in the app or its notification.</p>
+      </div>
+      <div>
+        <span class="feature-number" aria-hidden="true">03</span>
+        <h2>See what you’ve collected</h2>
+        <p>Look back through your rewards and see what’s been claimed.</p>
+      </div>
+      <div>
+        <span class="feature-number" aria-hidden="true">04</span>
+        <h2>Light on battery</h2>
+        <p>Designed to keep battery use low, without playing video on your phone. Battery use varies by device and connection.</p>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+      <div class="wrap how-layout">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Connect Twitch.<br>Pick your games.</h2>
+          <p>Then turn on monitoring. You can check in or pause it whenever you like.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number" aria-hidden="true">1</span>
+            <div>
+              <h3>Connect Twitch</h3>
+              <p>Sign in on Twitch’s own page and give Perklet permission to connect. Perklet never sees your Twitch password.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">2</span>
+            <div>
+              <h3>Add your games</h3>
+              <p>Find a game, browse its campaigns, and add it to your watching list. Some rewards need you to link your game account too.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">3</span>
+            <div>
+              <h3>Turn on monitoring</h3>
+              <p>Perklet works through rewards one at a time. Its Android notification shows what’s happening, so you don’t have to keep the app open.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="wrap monitoring-note">
+        <p><strong>Keep your phone connected.</strong> Perklet needs internet access and permission to run in the background. Twitch and each campaign’s rules determine which rewards you can earn.</p>
+      </div>
+    </section>
+
+    <section class="accounts-section wrap" aria-labelledby="accounts-title">
+      <div class="section-heading accounts-heading">
+        <p class="eyebrow">Your accounts</p>
+        <h2 id="accounts-title">Twitch and Google<br>do different jobs.</h2>
+        <p>Twitch is for your Drops. Google keeps your subscription or gifted access linked to you. You manage each connection separately in Settings.</p>
+      </div>
+      <div class="account-cards">
+        <article class="account-card">
+          <div class="account-card-heading">
+            <h3>Twitch</h3>
+            <span class="account-label">For monitoring</span>
+          </div>
+          <p>This is the account Perklet uses to check your progress and claim Drops.</p>
+          <p class="account-detail">Your Twitch sign-in is saved in encrypted storage on your phone. You can disconnect it in Settings.</p>
+        </article>
+        <article class="account-card">
+          <div class="account-card-heading">
+            <h3>Google</h3>
+            <span class="account-label">For your Perklet account</span>
+          </div>
+          <p>Sign in with Google to use your subscription or gifted access. It’s optional if you just want to explore the app.</p>
+          <p class="account-detail">Google sign-in doesn’t give Perklet access to Gmail, Drive or your Google password. Signing in does not start a purchase.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="questions-section wrap" id="questions" aria-labelledby="questions-title">
+      <div class="section-heading">
+        <p class="eyebrow">Questions</p>
+        <h2 id="questions-title">Good to know.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Where can I get Perklet?</summary>
+          <div class="faq-answer"><p>Open <a href="https://play.google.com/store/apps/details?id=app.perklet" target="_blank" rel="noopener noreferrer">Perklet on Google Play</a> with the Google account you joined the test with. The listing may be hidden if you haven’t joined. Trouble getting in? Email <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a>.</p></div>
+        </details>
+        <details>
+          <summary>Do I need to sign in with Google?</summary>
+          <div class="faq-answer"><p>No. You can explore the app without Google sign-in. In versions with subscriptions, sign in when you want to buy one or use gifted access. You still need to connect Twitch to monitor Drops.</p></div>
+        </details>
+        <details id="battery-usage">
+          <summary>Does it use much battery?</summary>
+          <div class="faq-answer"><p>Perklet is designed to keep battery use low. It monitors Drops without playing video on your phone. How much it uses depends on your device, connection and background settings.</p></div>
+        </details>
+        <details>
+          <summary>What does a subscription change?</summary>
+          <div class="faq-answer"><p>In versions with subscriptions, the free watching list holds one game. A subscription lets you keep as many games as you like on the list, without swapping one out to add another.</p><p>Perklet still works on one reward at a time. You’ll see the price and renewal details in the app before you buy. There’s no checkout on this website.</p></div>
+        </details>
+        <details>
+          <summary>Will every reward be delivered to my game?</summary>
+          <div class="faq-answer"><p>Some rewards need a linked game account or other requirements from the publisher. Progress and delivery depend on Twitch and the game, so they aren’t something Perklet can guarantee. Campaigns can also change or end.</p></div>
+        </details>
+        <details>
+          <summary>Where can I read about my data or request deletion?</summary>
+          <div class="faq-answer"><p>Read the <a href="privacy/">privacy policy</a> for details about your data, Google sign-in, subscriptions and optional crash reporting. To request deletion, follow the steps on the <a href="data-deletion/">account and data deletion page</a>. You don’t need access to the app to make a request.</p><p>Deleting your Perklet account won’t stop subscription renewals. You’ll need to cancel those separately in Google Play.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="support-section wrap" aria-labelledby="support-title">
+      <div>
+        <p class="eyebrow">Need a hand?</p>
+        <h2 id="support-title">Questions about Perklet?</h2>
+        <p>Email us about setup, your account or your data.</p>
+      </div>
+      <a class="button button-primary" href="mailto:perklet.support@gmail.com">Contact support</a>
     </section>
   </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <a class="wordmark" href="./" aria-label="Perklet home">
+        <img src="assets/perklet-icon.svg" width="34" height="34" alt="" loading="lazy">
+        <span>Perklet</span>
+      </a>
+      <nav aria-label="Legal and support">
+        <a href="privacy/">Privacy policy</a>
+        <a href="data-deletion/">Account &amp; data deletion</a>
+        <a href="mailto:perklet.support@gmail.com">Contact support</a>
+      </nav>
+    </div>
+    <p class="independence-note">Perklet is an independent Android app, not affiliated with Twitch, Google or the game publishers. Game and reward artwork belongs to its respective owners.</p>
+    <p class="copyright">© 2026 Perklet</p>
+  </footer>
 </body>
 </html>
