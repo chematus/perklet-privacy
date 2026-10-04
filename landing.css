@@ -107,7 +107,7 @@ nav a:hover { text-decoration: underline; }
 .site-footer .wordmark { font-size: 1.35rem; }
 .site-footer nav { gap: 24px; }
 .site-footer nav a { color: var(--muted); font-size: 0.875rem; }
-.independence-note { max-width: 900px; margin-top: 25px; color: var(--muted); font-size: 0.8125rem; }
+.independence-note { max-width: 900px; margin-top: 25px; margin-inline: auto; color: var(--muted); font-size: 0.8125rem; text-align: center; }
 .copyright { margin-top: 12px; color: var(--muted); font-size: 0.8125rem; }
 @media (max-width: 960px) {
   .hero { gap: 32px; }
