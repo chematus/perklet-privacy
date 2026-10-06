@@ -160,6 +160,7 @@ nav a:hover { text-decoration: underline; }
 }
 @media (max-width: 360px) {
   .wrap { width: calc(100% - 32px); }
+  .site-header nav { gap: 10px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .preview-stage { padding: 22px 16px; }
   .phone-frame { width: 226px; }

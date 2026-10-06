@@ -1,0 +1,35 @@
+.guide-main { padding-top: 42px; }
+.guide-heading { max-width: 760px; }
+.guide-heading h1 { margin-top: 16px; font-size: clamp(2.75rem, 5.4vw, 4.5rem); line-height: 1.1; letter-spacing: -0.045em; }
+.guide-heading h1 span { color: var(--purple); }
+.guide-lead { max-width: 650px; margin-top: 24px; color: var(--muted); font-size: 1.1875rem; }
+.guide-platform { max-width: 680px; margin-top: 18px; color: var(--muted); font-size: 0.875rem; }
+.guide-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 64px; align-items: start; margin-top: 38px; }
+.guide-content { min-width: 0; }
+.guide-content section { padding-block: 28px; border-top: 1px solid var(--line); }
+.guide-content h2 { font-size: 1.5rem; line-height: 1.3; letter-spacing: -0.025em; }
+.guide-content p { margin-top: 16px; }
+.guide-content a { overflow-wrap: anywhere; }
+.guide-steps, .guide-checks { margin: 18px 0 0; padding-left: 24px; }
+.guide-steps li, .guide-checks li { padding-left: 4px; }
+.guide-steps li + li, .guide-checks li + li { margin-top: 16px; }
+.guide-preview .preview-stage { min-height: 0; padding: 24px 20px; border-radius: 28px 28px 70px 28px; }
+.guide-preview .phone-frame { width: 240px; box-shadow: 10px 14px 0 rgb(107 76 154 / 13%); }
+.guide-preview figcaption { margin-top: 16px; }
+.guide-download { margin-top: 24px; text-align: center; }
+.guide-download .store-access-note { max-width: 300px; margin-inline: auto; }
+.guide-support { margin-top: 30px; }
+nav a[aria-current="page"] { color: var(--purple); text-decoration: underline; }
+@media (max-width: 960px) {
+  .guide-layout { grid-template-columns: minmax(0, 1fr) 290px; gap: 36px; }
+}
+@media (max-width: 700px) {
+  .guide-main { padding-top: 32px; }
+  .guide-heading h1 { font-size: clamp(2.5rem, 9vw, 3.25rem); }
+  .guide-lead { font-size: 1.0625rem; }
+  .guide-layout { grid-template-columns: 1fr; gap: 28px; margin-top: 28px; }
+  .guide-content section { padding-block: 24px; }
+  .guide-content h2 { font-size: 1.375rem; }
+  .guide-aside { width: 100%; max-width: 360px; justify-self: center; }
+  .guide-support { margin-top: 42px; }
+}
