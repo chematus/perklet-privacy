@@ -19,7 +19,7 @@
       <p class="eyebrow">Privacy policy</p>
       <h1>Perklet privacy policy</h1>
       <div class="meta">
-        <p><strong>Effective:</strong> October 2, 2026</p>
+        <p><strong>Updated:</strong> October 13, 2026</p>
         <p><strong>Application:</strong> Perklet for Android (<code>app.perklet</code>)</p>
         <p><strong>Contact:</strong> <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a></p>
       </div>
@@ -41,7 +41,9 @@
       <p>Twitch session credentials and cookies are encrypted with a key protected by the Android Keystore. They are stored in Android's no-backup area and excluded from cloud backup and device transfer. Other operational data is held in app-private storage, but it is not separately encrypted by Perklet.</p>
 
       <h2>Twitch connection and monitoring</h2>
-      <p>When you choose <strong>Connect Twitch</strong>, authorization takes place through Twitch. Perklet then communicates directly with Twitch over encrypted connections to:</p>
+      <p>When you choose <strong>Connect Twitch</strong>, Twitch's own sign-in page opens in an app-owned private Firefox browser. Enter your Twitch credentials only on that page. Perklet's sign-in bridge does not read or record passwords or verification codes. After successful sign-in, the browser returns automatically to Perklet; its private session and temporary profile are disposed of.</p>
+      <p>Perklet retains only the session credentials/cookies and browser identity needed for native Twitch requests, encrypted as described above. It does not retain your full browsing history or Firefox profile, sync with a Firefox account, or send these credentials to a developer server. If Twitch expires or revokes access, Perklet asks you to reconnect; it does not store your password to sign in again or promise automatic access-token renewal.</p>
+      <p>Perklet then communicates directly with Twitch over encrypted connections to:</p>
       <ul>
         <li>validate the authorized session and retrieve basic Twitch account information;</li>
         <li>retrieve eligible games, campaigns, rewards, progress, and channel information;</li>
@@ -49,7 +51,7 @@
         <li>submit completed reward claims.</li>
       </ul>
       <p>The developer does not operate a Perklet server for these Twitch features. Perklet does not upload your Twitch credentials, session, watched games, campaign data, or reward history to a developer-operated server. The app displays your Twitch profile picture and may request campaign artwork from addresses supplied by Twitch. Twitch and those image hosts receive ordinary network information, such as your IP address, when the app connects to them.</p>
-      <p>Twitch may omit public campaigns from account-specific responses. To keep the campaign list complete, Perklet also retrieves public campaign metadata from the open-source <a href="https://github.com/SunkwiBOT/twitch-drops-api">SunkwiBOT Twitch Drops API</a> over an encrypted connection. Perklet does not send Twitch credentials, cookies, account identifiers, watched-game choices, progress, or reward history to this service. Its operator receives ordinary network information, such as your IP address and the Perklet user-agent, when the catalog is refreshed.</p>
+      <p>Browser-sign-in builds retrieve the campaign catalogue directly from Twitch, without the third-party Sunkwi service. Older builds using the previous connection method may still request public campaign metadata from the <a href="https://github.com/SunkwiBOT/twitch-drops-api">SunkwiBOT Twitch Drops API</a>. Those legacy requests contain no Twitch credentials, cookies, account identifiers, watched-game choices, progress or reward history; the operator receives ordinary connection information such as the IP address and Perklet user-agent.</p>
       <p>Perklet is not affiliated with, endorsed by, or sponsored by Twitch or any game publisher. Twitch processes data under its own <a href="https://www.twitch.tv/p/en/legal/privacy-notice/">Privacy Notice</a>.</p>
 
       <h2>Google sign-in and your Perklet account</h2>
@@ -86,7 +88,7 @@
       <p>Crashlytics is a service provider acting for the developer. Google states that it encrypts Firebase data in transit. Turning crash reporting off deletes reports that have not yet been sent and takes full effect after Perklet is reopened. Reports already uploaded to Crashlytics are retained by Firebase for up to 90 days. See <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> for more information.</p>
 
       <h2>Support and diagnostic sharing</h2>
-      <p><strong>Email beta feedback</strong> and <strong>Share diagnostic report</strong> operate only when you choose them. Perklet prepares a draft or share item, and you review it and choose the receiving app before anything is sent.</p>
+      <p><strong>Email feedback</strong> and <strong>Share diagnostic report</strong> operate only when you choose them. Perklet prepares a draft or share item, and you review it and choose the receiving app before anything is sent.</p>
       <p>If you email <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a>, the developer receives your sender address, the content and attachments you choose to provide, and technical details included in the draft, such as the Perklet version and Android API level. A shared diagnostic report is bounded and sanitized to omit credentials, account identifiers, and private response bodies, but you should still review it before sending.</p>
       <p>Support correspondence is retained only as long as reasonably needed to respond, investigate the issue, protect the project and its users, or meet legal obligations. It is not used for advertising.</p>
 
@@ -113,7 +115,7 @@
       <p>Deleting your Perklet account does not delete your Google or Twitch account. It also does <strong>not cancel a paid subscription</strong>. Cancel recurring charges separately in <strong>Google Play → Payments &amp; subscriptions → Subscriptions → Perklet</strong>, using the Google Play account that made the purchase.</p>
 
       <h2>Other services</h2>
-      <p>Twitch, the SunkwiBOT Twitch Drops API, Google Firebase, RevenueCat, Android, Google Play, your email or sharing app, and profile-picture or artwork hosts process information under their own terms and privacy policies. Different app builds can enable different features; this policy explains the data handling for the features you choose to use.</p>
+      <p>Twitch, Google Firebase, RevenueCat, Android, Google Play, your email or sharing app, and profile-picture or artwork hosts process information under their own terms and privacy policies. Mozilla GeckoView supplies the embedded Firefox sign-in engine; no Firefox account or browser sync is used. The Sunkwi service applies only to older builds as described above. Different app builds can enable different features; this policy explains the data handling for the features you choose to use.</p>
 
       <h2>Children</h2>
       <p>Perklet is not directed to anyone who is not permitted to use Twitch or install the app under applicable law and Twitch's terms. Do not connect an account unless you are allowed to do so.</p>
