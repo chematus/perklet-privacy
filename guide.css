@@ -4,6 +4,8 @@
 .guide-heading h1 span { color: var(--purple); }
 .guide-lead { max-width: 650px; margin-top: 24px; color: var(--muted); font-size: 1.1875rem; }
 .guide-platform { max-width: 680px; margin-top: 18px; color: var(--muted); font-size: 0.875rem; }
+.guide-jump-links { margin-top: 24px; gap: 8px 22px; }
+.guide-jump-links a { color: var(--purple); text-decoration: underline; }
 .guide-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 64px; align-items: start; margin-top: 38px; }
 .guide-content { min-width: 0; }
 .guide-content section { padding-block: 28px; border-top: 1px solid var(--line); }
