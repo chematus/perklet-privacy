@@ -20,7 +20,7 @@
       <p class="eyebrow">Privacy policy</p>
       <h1>Perklet privacy policy</h1>
       <div class="meta">
-        <p><strong>Updated:</strong> October 13, 2026</p>
+        <p><strong>Updated:</strong> November 2, 2026</p>
         <p><strong>Application:</strong> Perklet for Android (<code>app.perklet</code>)</p>
         <p><strong>Contact:</strong> <a href="mailto:perklet.support@gmail.com">perklet.support@gmail.com</a></p>
       </div>
@@ -39,11 +39,13 @@
         <li>sign-in state and cached subscription-access information, when those features are enabled; and</li>
         <li>a bounded technical event log used for diagnostics.</li>
       </ul>
-      <p>Twitch session credentials and cookies are encrypted with a key protected by the Android Keystore. They are stored in Android's no-backup area and excluded from cloud backup and device transfer. Other operational data is held in app-private storage, but it is not separately encrypted by Perklet.</p>
+      <p>Twitch access credentials, authorization metadata and any session cookies used by older connection methods are encrypted with a key protected by the Android Keystore. They are stored in Android's no-backup area and excluded from cloud backup and device transfer. Other operational data is held in app-private storage, but it is not separately encrypted by Perklet.</p>
 
       <h2>Twitch connection and monitoring</h2>
-      <p>When you choose <strong>Connect Twitch</strong>, Twitch's own sign-in page opens in an app-owned private Firefox browser. Enter your Twitch credentials only on that page. Perklet's sign-in bridge does not read or record passwords or verification codes. After successful sign-in, the browser returns automatically to Perklet; its private session and temporary profile are disposed of.</p>
-      <p>Perklet retains only the session credentials/cookies and browser identity needed for native Twitch requests, encrypted as described above. It does not retain your full browsing history or Firefox profile, sync with a Firefox account, or send these credentials to a developer server. If Twitch expires or revokes access, Perklet asks you to reconnect; it does not store your password to sign in again or promise automatic access-token renewal.</p>
+      <p>In versions with Chrome sign-in, choosing <strong>Connect Twitch → Open Chrome</strong> opens Twitch's own website in the Chrome browser installed on your device. Chrome can reuse an existing Twitch sign-in. Enter any password or verification code only on Twitch's website, then tap <strong>Return to Perklet</strong> at the bottom to finish. Perklet does not read or record those passwords or verification codes.</p>
+      <p>Perklet validates and retains the necessary Twitch access credential, account identity and authorization profile, encrypted as described above. It does not read Chrome's cookie store, saved passwords or browsing history. Chrome manages its browser sign-in and browsing data separately under its own settings and <a href="https://www.google.com/chrome/privacy/">privacy notice</a>. Disconnecting Twitch in Perklet, clearing Perklet's data or uninstalling Perklet does not sign you out of Twitch in Chrome or clear Chrome's data.</p>
+      <p>Older versions instead open Twitch's page in an app-owned private Firefox browser. Those versions retain the necessary Twitch session credentials, cookies and browser identity encrypted on-device, and dispose of the temporary browser/profile after sign-in. They do not use a Firefox account or browser sync. Versions with Chrome sign-in do not bundle that Firefox engine.</p>
+      <p>No developer server receives your Twitch access credentials. If Twitch expires or revokes access, Perklet asks you to reconnect; it does not store your password to sign in again or promise automatic access-token renewal.</p>
       <p>Perklet then communicates directly with Twitch over encrypted connections to:</p>
       <ul>
         <li>validate the authorized session and retrieve basic Twitch account information;</li>
@@ -116,7 +118,7 @@
       <p>Deleting your Perklet account does not delete your Google or Twitch account. It also does <strong>not cancel a paid subscription</strong>. Cancel recurring charges separately in <strong>Google Play → Payments &amp; subscriptions → Subscriptions → Perklet</strong>, using the Google Play account that made the purchase.</p>
 
       <h2>Other services</h2>
-      <p>Twitch, Google Firebase, RevenueCat, Android, Google Play, your email or sharing app, and profile-picture or artwork hosts process information under their own terms and privacy policies. Mozilla GeckoView supplies the embedded Firefox sign-in engine; no Firefox account or browser sync is used. The Sunkwi service applies only to older builds as described above. Different app builds can enable different features; this policy explains the data handling for the features you choose to use.</p>
+      <p>Twitch, Google Firebase, RevenueCat, Android, Google Play, your email or sharing app, and profile-picture or artwork hosts process information under their own terms and privacy policies. Chrome handles the Twitch website in versions with Chrome sign-in. Mozilla GeckoView supplies the private Firefox engine in older versions that bundle it; those versions do not use a Firefox account or browser sync. The Sunkwi service applies only to older builds as described above. Different app builds can enable different features; this policy explains the data handling for the features you choose to use.</p>
 
       <h2>Children</h2>
       <p>Perklet is not directed to anyone who is not permitted to use Twitch or install the app under applicable law and Twitch's terms. Do not connect an account unless you are allowed to do so.</p>
